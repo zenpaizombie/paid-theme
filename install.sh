@@ -13,7 +13,7 @@ CYAN='\033[0;36m'
 check_license() {
     if [ -f "$LICENSE_FILE" ]; then
         LICENSE_KEY=$(cat "$LICENSE_FILE")
-        if [ "$LICENSE_KEY" == "RAIN" ]; then
+        if [ "$LICENSE_KEY" == "vps4owo" ]; then
             return 0
         fi
     fi
@@ -46,14 +46,14 @@ display_message() {
     echo -e "${RESET}"
     echo ""
     echo ""
-    echo -e "${BLUE}                    WHATSAPP : 085263390832${RESET}"
-    echo -e "${YELLOW}                    YOUTUBE  : RAINMC${RESET}"
+    echo -e "${BLUE}                    DISCORD : discord.gg/vps4owo${RESET}"
+    echo -e "${YELLOW}                    YOUTUBE  : zenpaizombie1${RESET}"
     echo ""
 }
 
 # Fungsi instalasi perangkat lunak
 install_software() {
-    echo -e ${RED}"𝗟𝗜𝗖𝗘𝗡𝗦𝗘 𝗔𝗡𝗗𝗔 𝗕𝗘𝗡𝗔𝗥!!, 𝗠𝗔𝗦𝗨𝗞𝗔𝗡 𝗨𝗟𝗔𝗡𝗚"
+    echo -e ${RED}"Your License Is Correct!!, Re-enter It"
 }
 
 # Fungsi untuk animasi teks berkedip satu per satu
@@ -72,28 +72,28 @@ animate_text() {
 if check_license; then
     display_message
     install_software
-    animate_text "𝖯𝖮𝖶𝖤𝖱𝖤𝖣 𝖡𝖸 𝖱𝖠𝖨𝖭𝖬𝖢"
+    animate_text "𝖯𝖮𝖶𝖤𝖱𝖤𝖣 𝖡𝖸 VPS4OWO & RAINMC"
 else
-    echo "Masukkan lisensi Anda:"
+    echo "Enter your license:"
     read -r LICENSE_KEY
     echo "$LICENSE_KEY" > "$LICENSE_FILE"
     check_license
     if [ $? -eq 0 ]; then
         display_message
         install_software
-        animate_text "𝖯𝖮𝖶𝖤𝖱𝖤𝖣 𝖡𝖸 𝖱𝖠𝖨𝖭"
+        animate_text "𝖯𝖮𝖶𝖤𝖱𝖤𝖣 𝖡𝖸 𝖱𝖠𝖨𝖭 & VPS4OWO"
     else
-        echo "Lisensi tidak valid."
+        echo "Invalid license."
         exit 1
     fi
 fi
 
 # Fungsi untuk menangani pilihan "FIX YARN"
 fix_yarn() {
-    echo "Anda memilih untuk memperbaiki YARN."
-    echo "Menjalankan perintah perbaikan YARN"
+    echo "You Choose To Repair YARN."
+    echo "Executing the Repair Command YARN"
 # Pemeriksaan apakah pengguna sudah memiliki panel Pterodactyl
-    echo "KAMU HARUS MEMILIKI PANEL PTERODACTYL TERLEBIH DAHULU! APAKAH ANDA MEMPUNYAINYA? (YES/NO)"
+    echo "YOU MUST HAVE A PTERODACTYL PANEL FIRST! DO YOU HAVE IT? (YES/NO)"
     read -r HAS_PTERODACTYL
 
     if [ "$HAS_PTERODACTYL" == "YES" ] || [ "$HAS_PTERODACTYL" == "yes" ]; then
@@ -107,26 +107,26 @@ fix_yarn() {
     sudo apt install -y nodejs
     npm i -g yarn
     cd /var/www/pterodactyl
-   echo -e {RED}"𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗗𝗜𝗧𝗨𝗡𝗚𝗚𝗨, 𝗜𝗡𝗜 𝗔𝗞𝗔𝗡 𝗦𝗘𝗗𝗜𝗞𝗜𝗧 𝗟𝗔𝗠𝗔"
+   echo -e {RED}"Please Wait, This Will Take a Little Long"
    yarn
     yarn build:production
 
-    echo "Perbaikan YARN selesai."
+    echo "YARN REPAIR COMPLETE."
 elif [ "$HAS_PTERODACTYL" == "NO" ] || [ "$HAS_PTERODACTYL" == "no" ]; then
-        echo "Instalasi tema Enigma dibatalkan karena Anda tidak memiliki panel Pterodactyl."
+        echo "The Enigma theme installation is aborted because you do not have the Pterodactyl panel."
         exit 1
     else
-        echo "Pilihan tidak valid. Instalasi dibatalkan."
+        echo "Invalid selection. Installation aborted."
         exit 1
     fi
 }
 installThemeice(){
-    echo "ANDA HARUS MEMILIKI PANEL PTERODACTYL TERLEBIH DAHULU! APAKAH ANDA MEMPUNYAINYA? (YES/NO)"
+    echo "YOU MUST HAVE A PTERODACTYL PANEL FIRST! DO YOU HAVE IT? (YES/NO)"
     read -r HAS_PTERODACTYL
 
     if [ "$HAS_PTERODACTYL" == "YES" ] || [ "$HAS_PTERODACTYL" == "yes" ]; then
     
-        echo "APAKAH ANDA SUDAH MENGHAPUS SEMUA THEME DI PANEL PTERODACTYL? (y/n)"
+        echo "HAVE YOU REMOVED ALL THEME IN THE PTERODACTYL PANEL? (y/n)"
         read -r HAS_PTERODACTYL        
         if [ "$HAS_PTERODACTYL" == "y" ] || [ "$HAS_PTERODACTYL" == "Y" ]; then
             apt install git
@@ -152,50 +152,50 @@ installThemeice(){
     sudo apt install -y nodejs
     npm i -g yarn
             cd /var/www/pterodactyl
-   echo -e {RED}"𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗗𝗜𝗧𝗨𝗡𝗚𝗚𝗨, 𝗜𝗡𝗜 𝗔𝗞𝗔𝗡 𝗦𝗘𝗗𝗜𝗞𝗜𝗧 𝗟𝗔𝗠𝗔"
+   echo -e {RED}"PLEASE WAIT, THIS WILL TAKE A WHILE"
            yarn
             yarn build:production
             sudo php artisan optimize:clear
 
-            echo "Konfigurasi tambahan selesai."
+            echo "Additional configuration is complete."
         elif [ "$HAS_PTERODACTYL" == "NO" ] || [ "$HAS_PTERODACTYL" == "no" ] || [ "$HAS_PTERODACTYL" == "n" ] || [ "$HAS_PTERODACTYL" == "N" ]; then
-            echo "Mengabaikan konfigurasi tambahan untuk Pterodactyl."
-            echo "Dibatalkan."
+            echo "Ignores additional configuration for Pterodactyl."
+            echo "Cancelled."
             exit 1
         else
-            echo "Pilihan tidak valid. Instalasi dibatalkan."
+            echo "Invalid selection. Installation aborted."
             exit 1
         fi
     else
-        echo "Anda harus memiliki panel Pterodactyl terlebih dahulu. Instalasi dibatalkan."
+        echo "You must have the Pterodactyl panel first. Installation aborted."
         exit 1
     fi
 }
 deletefilesptero(){
-    echo "PROSES"
-    echo "Menjalankan perintah Anda"
-    echo "APAKAH ANDA INGIN MENGUNINSTAL FILE PTERODACTYL? (YES/NO)"
+    echo "PROCESS"
+    echo "Carry Out Your Orders"
+    echo "DO YOU WANT TO UNINSTALL THE PTERODACTYL FILES? (YES/NO)"
     read -r HAS_PTERODACTYL
 
     if [ "$HAS_PTERODACTYL" == "YES" ] || [ "$HAS_PTERODACTYL" == "yes" ]; then
     cd /var/ && rm -r www
     echo "FILE PTERODACTYL TELAH TER UNINSTALL"
     elif [ "$HAS_PTERODACTYL" == "NO" ] || [ "$HAS_PTERODACTYL" == "no" ]; then
-        echo "Instalasi tema Enigma dibatalkan karena Anda tidak memiliki panel Pterodactyl."
+        echo "The Enigma theme installation is aborted because you do not have the Pterodactyl panel."
         exit 1
     else
-        echo "Pilihan tidak valid. Instalasi dibatalkan."
+        echo "Invalid selection. Installation aborted."
         exit 1
     fi
 }
 # Fungsi untuk menangani pilihan "INSTALL THEME ENIGMA"
 install_theme_enigma() {
-echo "ANDA HARUS MEMILIKI PANEL PTERODACTYL TERLEBIH DAHULU! APAKAH ANDA MEMPUNYAINYA? (YES/NO)"
+echo "YOU MUST HAVE A PTERODACTYL PANEL FIRST! DO YOU HAVE IT? (YES/NO)"
     read -r HAS_PTERODACTYL
 
     if [ "$HAS_PTERODACTYL" == "YES" ] || [ "$HAS_PTERODACTYL" == "yes" ]; then
     
-        echo "APAKAH ANDA SUDAH MENGHAPUS SEMUA THEME DI PANEL PTERODACTYL? (y/n)"
+        echo "HAVE YOU REMOVED ALL THEME IN THE PTERODACTYL PANEL? (y/n)"
         read -r HAS_PTERODACTYL        
         if [ "$HAS_PTERODACTYL" == "y" ] || [ "$HAS_PTERODACTYL" == "Y" ]; then
             echo "𝗣𝗥𝗢𝗦𝗘𝗦 𝗜𝗡𝗦𝗧𝗔𝗟𝗟"
