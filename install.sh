@@ -13,7 +13,7 @@ CYAN='\033[0;36m'
 check_license() {
     if [ -f "$LICENSE_FILE" ]; then
         LICENSE_KEY=$(cat "$LICENSE_FILE")
-        if [ "$LICENSE_KEY" == "vps4owo" ]; then
+        if [ "$LICENSE_KEY" == "zenpaiop12" ]; then
             return 0
         fi
     fi
