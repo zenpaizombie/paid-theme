@@ -1,9 +1,5 @@
 #!/bin/bash
-# Prompt for license key
-read -p "Enter license key: " license_key
-# Check if the license key is valid
-if [ "$license_key" == "RAIN" ]; then
-  echo "License key is valid."
+
   # Install Node.js and Yarn
   sudo mkdir -p /etc/apt/keyrings
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor >
